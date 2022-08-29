@@ -21,6 +21,11 @@ justify-content: center;
 align-items: center;
 }
 
+#header-text{
+    display:flex;
+    flex-direction: column;
+}
+
 .about{
 height: 35%;
 color:white;
@@ -64,7 +69,7 @@ background-color:pink;
 }
 
 .ceo-container{
-        margin-top: 20px;
+    margin: 10px;
 height:100%;
 display:flex;
 justify-content: center;
