@@ -5,7 +5,10 @@
 }
 
 body{
-    background:linear-gradient(120deg,rgba(184, 241, 184),#20c4a6)
+    background: linear-gradient(90deg, rgba(184, 241, 184), #20c4a6);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: 'Poppins';
 }
 
 
@@ -26,11 +29,18 @@ align-items: center;
     flex-direction: column;
 }
 
+#header-title{
+    font-size:2.5rem;
+}
+
+#header-subtitle{
+    font-size:1.5rem;
+}
+
 .about{
 height: 35%;
-color:white;
+color:black;
 display:flex;
-background-color: white;
 width:100%;
 }
 
@@ -46,7 +56,6 @@ width:100%;
     align-items: center;
     min-height:100%;
 width:50%;
-background-color: pink;
 }
 
 .mission-text{
@@ -65,7 +74,6 @@ background-color: pink;
             align-items: center;
     min-height: 100%;
 width:50%;
-background-color:pink;
 }
 
 .ceo-container{
@@ -83,7 +91,10 @@ justify-content: center;
 align-items: center;
     font-size: 1.2rem;
 }
-
+.ceo-text a{
+    text-decoration: none;
+    display:inline-block;
+}
 
 .owner img{
 height:200px;
@@ -91,14 +102,21 @@ min-height: 100px;
 border-radius: 100%;
 }
 
+.ceo-img-div{
+display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .products{
-height: 25vh;
+height:300px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin:1em;
 }
 
-.contact{
-height: 25vh;
-}
 
 
 .header img{
@@ -109,7 +127,7 @@ padding:1em;
 .slider {
     width: 100%;
     max-width: 800px;
-    height: 400px;
+    height: 300px;
     position: relative;
     /* overflow: hidden; */
 }
@@ -117,7 +135,7 @@ padding:1em;
 .slide {
     width: 100%;
     max-width: 800px;
-    height: 400px;
+    height: 300px;
     position: absolute;
     transition: all 1s;
 }
@@ -150,6 +168,9 @@ padding:1em;
     right: 2%;
 }
 
+.contact {
+    height: 100px;
+}
 
 
 
