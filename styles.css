@@ -5,16 +5,18 @@
 }
 
 body{
-    background: linear-gradient(90deg, rgba(184, 241, 184), #20c4a6);
+    background: linear-gradient(#20c4a6,rgba(184, 241, 184));
         background-size: cover;
         background-repeat: no-repeat;
         font-family: 'Poppins';
+        color:white;
 }
 
 
 .container{
     display:flex;
     flex-direction: column;
+    z-index:1;
 }
 
 .header{
@@ -27,32 +29,60 @@ align-items: center;
 #header-text{
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #header-title{
-    font-size:2.5rem;
+    font-size:3rem;
+    letter-spacing: 3px;
 }
 
 #header-subtitle{
-    font-size:1.5rem;
+    font-size:1rem;
+    letter-spacing: 3px;
 }
 
 .about{
 height: 35%;
-color:black;
 display:flex;
 width:100%;
 }
 
 .abouthd{
-    font-size:1.5rem;
+    font-size:2rem;
+    padding:0.5em;
+    margin-top:0.5em;
     text-decoration: underline;
+    position:relative;
+    overflow: hidden;
 }
+
+
+.abouthd::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #20c4a6;
+    transition: all 0.75s;
+    transform: translateX(-100%);
+    z-index:-1;
+    border-radius:10px;
+}
+
+.abouthd:hover::before {
+    transform: translateX(0);
+}
+
+
 
 .mission{
     display:flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     min-height:100%;
 width:50%;
@@ -60,11 +90,23 @@ width:50%;
 
 .mission-text{
     display: flex;
+    flex-direction: column;
         justify-content: center;
         align-items: center;
     font-size:1.2rem;
-    width:75%;
-    height:100%;
+}
+
+.logo-container{
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 233px;
+}
+
+.logo-container img {
+    height: 231.61px;
+    padding: 1em;
 }
 
 .owner{
@@ -77,20 +119,19 @@ width:50%;
 }
 
 .ceo-container{
-    margin: 10px;
 height:100%;
 display:flex;
 justify-content: center;
 }
 
 .ceo-text{
-    margin-left:14px;
-    margin-right:10px;
 display:flex;
 justify-content: center;
 align-items: center;
     font-size: 1.2rem;
+    flex-direction: column;
 }
+
 .ceo-text a{
     text-decoration: none;
     display:inline-block;
@@ -108,34 +149,72 @@ display: flex;
     align-items: center;
 }
 
+#article-btn{
+    font-size:1.2rem;
+    margin-top:1em;
+    background-color: white;
+    width:80px;
+    height:40px;
+    border:none;
+    color:#20c4a6;
+    border-radius:10px;
+    cursor:pointer;
+    position:relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#article-btn::before{
+    content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #20c4a6;
+        transition: all 0.75s;
+        transform: translateX(-100%);
+        z-index:-2;
+        border-radius: 10px;
+}
+
+#article-btn:hover::before{
+    transform:translateX(0)
+}
+
+#article-btn:hover{
+    color:white;
+}
+
+
+
 .products{
-height:300px;
+height:440px;
 display:flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-margin:1em;
+margin:2em 1em 1em 2em;
 }
 
-
-
-.header img{
-height:200px;
-padding:1em;
+.products-title{
+    font-size:2rem;
+    padding:0.5em;
 }
+
 
 .slider {
     width: 100%;
     max-width: 800px;
-    height: 300px;
+    height: 100%;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 .slide {
     width: 100%;
     max-width: 800px;
-    height: 300px;
+    height: 100%;
     position: absolute;
     transition: all 1s;
 }
@@ -143,7 +222,7 @@ padding:1em;
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: scale-down;
 }
 
 .btn {
@@ -158,6 +237,14 @@ padding:1em;
     background-color: #fff;
     font-size: 18px;
 }
+
+.btn:hover{
+    background-color:#20c4a6;
+    color:white;
+}
+.btn:active{
+    transform:scale(1.2);
+}
 .btn-prev {
     top: 45%;
     left: 2%;
@@ -170,45 +257,47 @@ padding:1em;
 
 .contact {
     height: 100px;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:50%;
+    margin:auto;
 }
 
 
-
-
-
-
-
-
-/* button{
-    text-decoration: none;
-    height:40px;
-    width:80px;
-    border-radius:10px;
-    background-color:white;
-    border:1px solid blue;
-    position:relative;
-    transition: all 1s;
-    z-index: 1;
-    overflow: hidden;
-}
-
-button:hover{
+#instagram{
+    font-size:3rem;
     color:white;
 }
 
-button::before{
-    content:"";
-    position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: blue;
-        transition:all 1s;
-        z-index:-1;
-        transform: translateX(-100%);
+a:visited{
+    text-decoration: none;
 }
 
-button:hover::before{
-    transform: translateX(0);
-} */
+#instagram:hover{
+    color:#20c4a6;
+    transition:0.75s;
+}
+
+#etsy-logo{
+    height:50px;
+    width:50px;
+    background-color: rgb(207, 150, 43);
+    color: white;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#etsy a{
+    text-decoration: none;
+}
+
+#etsy-logo:hover{
+    background-color:white;
+    border:1px solid rgb(207, 150, 43);
+    color:rgb(207, 150, 43);
+    transition: 0.75s;
+}
+
