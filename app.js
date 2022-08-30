@@ -4,13 +4,15 @@ const nextSlideBtn = document.querySelector(".btn-next");
 const prevSlideBtn = document.querySelector(".btn-prev");
 let dots = document.querySelectorAll(".dot");
 let maxSlide = slides.length - 1;
+let headerText = document.getElementsByClassName("header");
 
 slides.forEach((slide, index) => {
   slide.style.transform = `translateX(${index * 100}%)`;
 });
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  dots[0].classList.add("active");
+  headerText[0].classList.add("header-active");
+  console.log("hello");
 });
 
 nextSlideBtn.addEventListener("click", nextSlide);
