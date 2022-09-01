@@ -280,3 +280,22 @@ a:visited{
     transition: 0.75s;
 }
 
+
+
+
+/* scroll animations */
+
+
+.reveal{
+opacity:0;
+transition: 2s ease-in;
+}
+
+.reveal-active{
+    opacity:1;
+    transition:2s ease-in;
+}
+
+.mission {
+    transition: 1s ease-in;
+}

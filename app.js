@@ -40,3 +40,26 @@ function prevSlide() {
     slide.style.transform = `translateX(${100 * (index - currentSlide)}%)`;
   });
 }
+
+// scroll animations
+
+let ownerSection = document.getElementsByClassName("owner");
+let header = document.getElementsByClassName("header");
+
+function reveal() {
+  let reveals = document.querySelectorAll(".reveal");
+  let headerHeight = header[0].offsetHeight;
+
+  for (let i = 0; i < reveals.length; i++) {
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
+    let elementVisible = 300;
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("reveal-active");
+    } else {
+      reveals[i].classList.remove("reveal-active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
