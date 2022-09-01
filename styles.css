@@ -44,9 +44,24 @@ transform: translateY(-100%);
     letter-spacing: 4px;
 }
 
+#header-title:hover{
+color:pink;
+transition:2s ease-in;
+}
+
 #header-subtitle{
     font-size:1rem;
     letter-spacing: 3px;
+}
+
+svg{
+    position:absolute;
+    height:60px;
+    width:60px;
+    top:45%;
+    right:10%;
+    fill:white;
+    animation: moveUpDown 1s infinite alternate;
 }
 
 .about{
@@ -58,6 +73,7 @@ height:75vh;
 padding-left:1em;
 padding-right:1em;
 text-align: center;
+overflow: hidden;
 }
 
 .about img{
@@ -254,7 +270,7 @@ a:visited{
 }
 
 #instagram:hover{
-    color:#20c4a6;
+    color:pink;
     transition:0.75s;
 }
 
@@ -286,16 +302,31 @@ a:visited{
 /* scroll animations */
 
 
-.reveal{
-opacity:0;
-transition: 2s ease-in;
+.reveal {
+    opacity: 0;
+    transition: 2s ease-in;
 }
 
-.reveal-active{
-    opacity:1;
-    transition:2s ease-in;
+.reveal-active {
+    opacity: 1;
+    transition: 2s ease-in;
 }
 
 .mission {
     transition: 1s ease-in;
+}
+
+
+
+
+@keyframes moveUpDown {
+
+    0%{
+        transform:translateY(-25%);
+    }
+
+    100%{
+        transform: translateY(25%);
+    }
+    
 }

@@ -44,6 +44,7 @@ function prevSlide() {
 // scroll animations
 
 let ownerSection = document.getElementsByClassName("owner");
+let missionSection = document.getElementsByClassName("mission");
 let header = document.getElementsByClassName("header");
 
 function reveal() {
@@ -56,8 +57,10 @@ function reveal() {
     let elementVisible = 300;
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("reveal-active");
+      missionSection[0].classList.add("mission-active");
     } else {
       reveals[i].classList.remove("reveal-active");
+      missionSection[0].classList.remove("mission-active");
     }
   }
 }
