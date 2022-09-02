@@ -46,7 +46,7 @@ transform: translateY(-100%);
 
 #header-title:hover{
 color:pink;
-transition:2s ease-in;
+transition:1.5s ease-in-out;
 }
 
 #header-subtitle{
@@ -169,7 +169,7 @@ overflow: hidden;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: #20c4a6;
+        background-color: pink;
         transition: all 0.75s;
         transform: translateX(-100%);
         z-index:-2;
@@ -203,6 +203,7 @@ overflow:hidden;
 
 .product-text{
 margin-bottom:2em;
+text-align: center;
 }
 
 
@@ -367,5 +368,11 @@ svg{
 }
 .products{
     height:60vh;
+}
+.abouthd{
+    font-size:1.5rem;
+}
+.about{
+    padding:1em;
 }
 }
