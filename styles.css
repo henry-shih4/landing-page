@@ -350,3 +350,19 @@ a:visited{
                 transform: translateX(0%);
             }
 }
+
+
+/*mobile*/
+
+@media (max-width: 550px){
+    .mission{
+        margin-right:2em;
+    }
+
+svg{
+         height:40px;
+         width:40px;
+         top:45%;
+         right:6%;
+}
+}
