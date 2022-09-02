@@ -49,7 +49,7 @@ let header = document.getElementsByClassName("header");
 function reveal() {
   let reveals = document.querySelectorAll(".reveal");
   let headerHeight = header[0].offsetHeight;
-  let slider = document.getElementsByClassName('slider')
+  let slider = document.getElementsByClassName("slider");
 
   for (let i = 0; i < reveals.length; i++) {
     let windowHeight = window.innerHeight;
@@ -58,7 +58,7 @@ function reveal() {
     if (elementTop < windowHeight - elementVisible) {
       reveals[i].classList.add("reveal-active");
       missionSection[0].classList.add("mission-active");
-      slider[0].classList.add('slider-active')
+      slider[0].classList.add("slider-active");
     } else {
       reveals[i].classList.remove("reveal-active");
       missionSection[0].classList.remove("mission-active");
